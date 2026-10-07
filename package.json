@@ -1,0 +1,9 @@
+{
+  "name": "sevasetu",
+  "version": "1.0.0",
+  "description": "SevaSetu — NGO Volunteer & Donor Management Platform",
+  "scripts": {
+    "dev": "./serve.sh",
+    "start": "./serve.sh"
+  }
+}

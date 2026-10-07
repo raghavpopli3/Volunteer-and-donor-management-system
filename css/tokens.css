@@ -1,0 +1,137 @@
+/* ==========================================================================
+   SevaSetu Design System — Formal Civic NGO Operations Platform
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Formal Palette — Executive Trust Navy & Slate */
+  --brand-50:  #eff6ff;
+  --brand-100: #dbeafe;
+  --brand-200: #bfdbfe;
+  --brand-300: #93c5fd;
+  --brand-400: #60a5fa;
+  --brand-500: #2563eb;
+  --brand-600: #1d4ed8;
+  --brand-700: #1e40af;
+  --brand-800: #1e3a8a;
+  --brand-900: #172554;
+  --brand-glow: rgba(29,78,216,0.06);
+
+  --saffron-50:  #fffbeb;
+  --saffron-400: #f59e0b;
+  --saffron-500: #d97706;
+
+  --emerald-500: #059669;
+  --rose-500:    #dc2626;
+  --sky-500:     #0284c7;
+  --amber-500:   #d97706;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* Refined, Formal Geometric Radii */
+  --r-xs:  3px;
+  --r-sm:  4px;
+  --r-md:  6px;
+  --r-lg:  8px;
+  --r-xl:  10px;
+  --r-full: 9999px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 0.12s;
+  --t-norm: 0.18s;
+}
+
+/* ── Light Theme (Formal Corporate Slate) ── */
+:root, [data-theme="light"] {
+  --bg-body:      #f8fafc;
+  --bg-sidebar:   #0f172a;
+  --sb-hover:     #1e293b;
+  --sb-active:    #1e293b;
+  --sb-text:      #94a3b8;
+  --sb-bright:    #f8fafc;
+  --sb-border:    rgba(255, 255, 255, 0.08);
+
+  --bg-surface:   #ffffff;
+  --bg-alt:       #f8fafc;
+  --bg-hover:     #f1f5f9;
+  --bg-input:     #ffffff;
+  --bg-overlay:   rgba(15, 23, 42, 0.55);
+
+  --border:       #e2e8f0;
+  --border-hover: #cbd5e1;
+  --border-focus: var(--brand-600);
+
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #64748b;
+  --text-inverse:   #ffffff;
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+
+  /* Formal Status Badge Tokens */
+  --tk-green-bg:  #f0fdf4; --tk-green-tx:  #166534; --tk-green-br:  #bbf7d0;
+  --tk-blue-bg:   #eff6ff; --tk-blue-tx:   #1e40af; --tk-blue-br:   #bfdbfe;
+  --tk-amber-bg:  #fffbeb; --tk-amber-tx:  #92400e; --tk-amber-br:  #fde68a;
+  --tk-red-bg:    #fef2f2; --tk-red-tx:    #991b1b; --tk-red-br:    #fecaca;
+  --tk-purple-bg: #f5f3ff; --tk-purple-tx: #5b21b6; --tk-purple-br: #ddd6fe;
+  --tk-slate-bg:  #f8fafc; --tk-slate-tx:  #334155; --tk-slate-br:  #cbd5e1;
+  --tk-orange-bg: #fff7ed; --tk-orange-tx: #9a3412; --tk-orange-br: #fed7aa;
+}
+
+/* ── Dark Theme (Executive Midnight) ── */
+[data-theme="dark"] {
+  --bg-body:      #090d16;
+  --bg-sidebar:   #060911;
+  --sb-hover:     #101626;
+  --sb-active:    #151d32;
+  --sb-text:      #94a3b8;
+  --sb-bright:    #f8fafc;
+  --sb-border:    rgba(255, 255, 255, 0.06);
+
+  --bg-surface:   #0f1422;
+  --bg-alt:       #141b2d;
+  --bg-hover:     #1a233a;
+  --bg-input:     #0c101c;
+  --bg-overlay:   rgba(0, 0, 0, 0.72);
+
+  --border:       #1e293b;
+  --border-hover: #334155;
+  --border-focus: var(--brand-500);
+
+  --text-primary:   #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+  --text-inverse:   #090d16;
+
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.45);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.5);
+  --shadow-xl: 0 20px 25px rgba(0,0,0,0.6);
+
+  --tk-green-bg:  rgba(5,150,105,0.12); --tk-green-tx:  #34d399; --tk-green-br:  rgba(5,150,105,0.25);
+  --tk-blue-bg:   rgba(37,99,235,0.12);  --tk-blue-tx:   #60a5fa; --tk-blue-br:   rgba(37,99,235,0.25);
+  --tk-amber-bg:  rgba(217,119,6,0.12);  --tk-amber-tx:  #fbbf24; --tk-amber-br:  rgba(217,119,6,0.25);
+  --tk-red-bg:    rgba(220,38,38,0.12);  --tk-red-tx:    #f87171; --tk-red-br:    rgba(220,38,38,0.25);
+  --tk-purple-bg: rgba(124,58,237,0.12); --tk-purple-tx: #c084fc; --tk-purple-br: rgba(124,58,237,0.25);
+  --tk-slate-bg:  rgba(51,65,85,0.16);   --tk-slate-tx:  #cbd5e1; --tk-slate-br:  rgba(51,65,85,0.35);
+  --tk-orange-bg: rgba(217,119,6,0.12);  --tk-orange-tx: #fb923c; --tk-orange-br: rgba(217,119,6,0.25);
+}

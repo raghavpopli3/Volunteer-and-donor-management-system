@@ -1,0 +1,222 @@
+/* ==========================================================================
+   SevaSetu Views — Formal Views (Dashboard, Directory, Ledger, Events, Reports)
+   ========================================================================== */
+
+/* ── Page Header Row ── */
+.page-hd-row {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.page-hd-text h2 {
+  font-size: 1.125rem; font-weight: 600;
+  color: var(--text-primary); letter-spacing: -0.015em;
+}
+.page-hd-text p {
+  font-size: 0.78125rem; color: var(--text-muted); margin-top: 2px;
+}
+.page-hd-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+/* ── Dashboard Welcome Card ── */
+.dash-welcome {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 18px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  box-shadow: var(--shadow-xs);
+}
+.dash-welcome-text h2 {
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--text-primary); letter-spacing: -0.015em;
+}
+.dash-welcome-text p {
+  font-size: 0.8125rem; color: var(--text-muted); margin-top: 4px; line-height: 1.45;
+}
+.dash-welcome-text p strong {
+  color: var(--text-primary); font-weight: 600;
+}
+.dash-welcome-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ── Charts Area ── */
+.charts-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 900px) { .charts-row { grid-template-columns: 1fr; } }
+
+.chart-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-xs);
+  display: flex; flex-direction: column; gap: 14px;
+  min-height: 290px;
+}
+.chart-card-hd {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px;
+}
+.chart-card-hd h3 { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.chart-card-hd p  { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+.chart-legend {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.75rem; color: var(--text-muted);
+}
+.leg-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+.chart-wrap {
+  width: 100%; height: 220px;
+  position: relative;
+  flex: 1;
+}
+.chart-wrap canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Split panel row ── */
+.split-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 900px) { .split-row { grid-template-columns: 1fr; } }
+
+/* ── Volunteer Cards ── */
+.vol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+.vol-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 16px;
+  display: flex; flex-direction: column; gap: 12px;
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: box-shadow var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.vol-card:hover { box-shadow: var(--shadow-sm); border-color: var(--border-hover); }
+.vol-card-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.vol-card-info { display: flex; gap: 10px; align-items: flex-start; }
+.vol-avatar-lg {
+  width: 38px; height: 38px;
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 0.8125rem; color: #fff; flex-shrink: 0;
+  box-shadow: var(--shadow-xs);
+}
+.vol-card-name { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.vol-card-sub  { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+.vol-skills    { display: flex; flex-wrap: wrap; gap: 4px; }
+.vol-stat-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  font-size: 0.75rem; color: var(--text-muted);
+}
+.vol-stat-row strong { color: var(--text-primary); font-weight: 600; }
+
+/* ── Profile Drawer Header ── */
+.drawer-profile-banner {
+  display: flex; align-items: center; gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.drawer-avatar-xl {
+  width: 50px; height: 50px; border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 1.125rem; color: #fff; flex-shrink: 0;
+}
+.drawer-profile-info h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-primary); }
+.drawer-profile-info p  { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+/* History card items in drawer */
+.hist-item {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 12px;
+  display: flex; flex-direction: column; gap: 5px;
+}
+.hist-top { display: flex; align-items: center; justify-content: space-between; }
+.hist-title { font-weight: 600; font-size: 0.8125rem; color: var(--text-primary); }
+.hist-amt   { font-weight: 600; font-size: 0.8125rem; color: var(--brand-700); font-family: var(--font-mono); }
+[data-theme="dark"] .hist-amt { color: var(--brand-400); }
+.hist-meta  { font-size: 0.72rem; color: var(--text-muted); }
+
+/* ── Events / Drives ── */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+.event-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 18px;
+  display: flex; flex-direction: column; gap: 12px;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.event-card:hover { box-shadow: var(--shadow-sm); border-color: var(--border-hover); }
+
+.progress-track {
+  height: 6px; background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full); overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--brand-600);
+  border-radius: var(--r-full);
+  transition: width var(--t-norm) var(--ease);
+}
+
+.event-stats {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 8px 12px; font-size: 0.75rem; color: var(--text-muted);
+}
+.event-stat-num { font-weight: 600; font-size: 0.875rem; color: var(--text-primary); }
+.event-stat-val { font-weight: 600; font-size: 0.875rem; color: var(--brand-700); font-family: var(--font-mono); }
+[data-theme="dark"] .event-stat-val { color: var(--brand-400); }
+
+/* ── Reports ── */
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+.report-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 18px;
+  display: flex; flex-direction: column; gap: 12px;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.report-card:hover { box-shadow: var(--shadow-sm); border-color: var(--border-hover); }
+.report-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--brand-600);
+}
+.report-card h4 { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.report-card p  { font-size: 0.78125rem; color: var(--text-muted); line-height: 1.45; }
+.report-meta    { font-size: 0.7rem; color: var(--text-muted); display: flex; gap: 6px; }
