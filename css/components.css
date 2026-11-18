@@ -1,5 +1,6 @@
 /* ==========================================================================
-   SevaSetu Component Library — Formal, Enterprise-Grade UI Components
+   SevaSetu Component Library — UI Components & Controls
+   Semester 3 Project | Reusable Styles
    ========================================================================== */
 
 /* ── Buttons ── */
@@ -290,7 +291,7 @@ table.dt tbody tr:last-child td { border-bottom: none; }
   font-family: var(--font-sans);
 }
 
-/* ── Modal (Formal Enterprise Standard) ── */
+/* ── Modal Dialogs ── */
 .modal-overlay {
   position: fixed; inset: 0;
   background: var(--bg-overlay);

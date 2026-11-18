@@ -1,6 +1,5 @@
-/**
- * SevaSetu Charts Engine — High-DPI Canvas Visualisations (Formal Corporate Theme)
- */
+// SevaSetu Charts Engine — Custom HTML5 Canvas Visualizations
+// Semester 3 Project | Raghav
 
 const Charts = {
 

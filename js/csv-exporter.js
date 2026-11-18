@@ -1,7 +1,5 @@
-/**
- * SevaSetu NGO Platform — CSV Exporter
- * RFC-4180 compliant, ₹ Indian Rupee formatting
- */
+// SevaSetu NGO Platform — CSV Data Export Utility
+// Semester 3 Mini-Project | Raghav
 
 const Exporter = {
   cell(v) {

@@ -1,7 +1,8 @@
-/**
- * SevaSetu NGO Platform — Relational Data Store
- * Indian NGO context: ₹ currency, Indian names, cities, phone numbers
- */
+// =============================================================================
+// SevaSetu NGO Platform — LocalStorage Relational Data Store
+// Semester 3 Mini-Project | Student: Raghav
+// Core Entities: Volunteers, Donors, Contributions, Drives, & Attendance Logs
+// =============================================================================
 
 const DB_KEY = 'sevasetu_ngo_db_v1';
 
@@ -17,9 +18,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-04-12',
       city: 'Chennai',
-      emergencyContact: 'Ravi Krishnamurthy (+91 98401 23457)',
+      emergencyContact: 'Ravi Krishnamurthy (Spouse) — +91 94441 55210',
       notes: 'AIIMS-trained physician. Leads mobile health camps in Thiruvallur district. Fluent in Tamil, Telugu, English.',
-      avatarColor: '#4f46e5'
+      avatarColor: '#4f46e5',
+      avatarUrl: 'https://images.unsplash.com/photo-1594824813580-b778d91c7820?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-102',
@@ -31,9 +33,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-01-20',
       city: 'Pune',
-      emergencyContact: 'Shalini Venkataraman (+91 91770 45679)',
+      emergencyContact: 'Shalini V. (Sister) — +91 98840 91234',
       notes: 'Senior logistics manager. Manages convoy scheduling for ration distribution across drought-affected talukas.',
-      avatarColor: '#0891b2'
+      avatarColor: '#0891b2',
+      avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-103',
@@ -45,9 +48,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-07-08',
       city: 'Hyderabad',
-      emergencyContact: 'Imran Shaikh (+91 80045 67891)',
+      emergencyContact: 'Imran Shaikh (Brother) — +91 80045 11980',
       notes: 'Teaches bridge courses to out-of-school children in the Old City area. DIET-certified schoolteacher.',
-      avatarColor: '#7c3aed'
+      avatarColor: '#7c3aed',
+      avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-104',
@@ -59,9 +63,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-09-01',
       city: 'Mumbai',
-      emergencyContact: 'Priya Nair (+91 97120 89013)',
+      emergencyContact: 'Priya Nair (Mother) — +91 97120 44321',
       notes: 'Professional photojournalist. Documents field impact stories for annual reports and social media outreach.',
-      avatarColor: '#d97706'
+      avatarColor: '#d97706',
+      avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-105',
@@ -73,9 +78,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-10-15',
       city: 'Thiruvananthapuram',
-      emergencyContact: 'Suresh Menon (+91 94460 34568)',
+      emergencyContact: 'Suresh Menon (Father) — +91 94460 77123',
       notes: 'PHC medical officer on deputation. Runs child nutrition screening and SAM management camps.',
-      avatarColor: '#059669'
+      avatarColor: '#059669',
+      avatarUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-106',
@@ -87,9 +93,10 @@ const SEED = {
       status: 'On-Leave',
       joinedDate: '2023-12-10',
       city: 'Nashik',
-      emergencyContact: 'Kavita Pawar (+91 98220 56790)',
+      emergencyContact: 'Kavita Pawar (Wife) — +91 98220 33456',
       notes: 'Licensed civil contractor. Key volunteer during Marathwada flood relief shelter reconstruction in 2024.',
-      avatarColor: '#b45309'
+      avatarColor: '#b45309',
+      avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-107',
@@ -101,9 +108,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-02-15',
       city: 'Coimbatore',
-      emergencyContact: 'Karthik Subramaniam (+91 99400 78902)',
+      emergencyContact: 'Karthik S. (Brother) — +91 99400 22189',
       notes: 'Handles volunteer onboarding, daily attendance, and on-ground coordination for multi-site drives.',
-      avatarColor: '#be185d'
+      avatarColor: '#be185d',
+      avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-108',
@@ -115,9 +123,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-06-05',
       city: 'Bengaluru',
-      emergencyContact: 'Rubina Tariq (+91 76540 90124)',
+      emergencyContact: 'Rubina Tariq (Mother) — +91 76540 66543',
       notes: 'Runs a football academy for at-risk youth in Shivajinagar. Collaborates with BBMP on slum outreach.',
-      avatarColor: '#4338ca'
+      avatarColor: '#4338ca',
+      avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-109',
@@ -129,9 +138,10 @@ const SEED = {
       status: 'Active',
       joinedDate: '2024-08-20',
       city: 'Kochi',
-      emergencyContact: 'Vijay Pillai (+91 96000 12346)',
+      emergencyContact: 'Vijay Pillai (Husband) — +91 96000 88712',
       notes: 'Environmental scientist. Coordinates mangrove restoration and plastic-free backwater awareness campaigns.',
-      avatarColor: '#15803d'
+      avatarColor: '#15803d',
+      avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80'
     },
     {
       id: 'vol-110',
@@ -143,9 +153,10 @@ const SEED = {
       status: 'Inactive',
       joinedDate: '2023-10-01',
       city: 'Delhi',
-      emergencyContact: 'Harpreet Kaur (+91 98100 23457)',
+      emergencyContact: 'Harpreet Kaur (Sister) — +91 98100 55432',
       notes: 'Teaches computer literacy to senior citizens and women SHG members through e-Shakti kiosks.',
-      avatarColor: '#64748b'
+      avatarColor: '#64748b',
+      avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&h=160&q=80'
     }
   ],
 
@@ -157,7 +168,7 @@ const SEED = {
       tier: 'Platinum',
       email: 'grants@tatatrusts.org',
       phone: '+91 22 6665 8282',
-      contactPerson: 'Ms. Roshni Nadar Malhotra (Grants Division)',
+      contactPerson: 'Siddharth Sharma (CEO Office / CSR Cell)',
       lifetimeTotal: 2500000,
       totalGifts: 4,
       lastDonationDate: '2026-02-10',
@@ -185,7 +196,7 @@ const SEED = {
       tier: 'Gold',
       email: 'csr@infosys.com',
       phone: '+91 80 2852 0261',
-      contactPerson: 'Sudha Murty (Chairperson)',
+      contactPerson: 'K. S. Narayanan (CSR Grants Desk)',
       lifetimeTotal: 950000,
       totalGifts: 3,
       lastDonationDate: '2025-12-15',
@@ -241,7 +252,7 @@ const SEED = {
       tier: 'Silver',
       email: 'wiprocares@wipro.com',
       phone: '+91 80 2844 0011',
-      contactPerson: 'Rishad Premji (CSR Division)',
+      contactPerson: 'Sunita Mehra (Program Coordinator)',
       lifetimeTotal: 225000,
       totalGifts: 2,
       lastDonationDate: '2026-01-14',
@@ -319,6 +330,8 @@ const SEED = {
       targetVolunteers: 30,
       volunteerHoursLogged: 148,
       status: 'Completed',
+      imageUrl: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=800&q=80',
+      localBanner: 'assets/drive-relief.svg',
       description: 'Emergency relief distribution: 1,200 ration kits, warm clothing bundles, and tarpaulin shelters for flood-affected families in low-lying pockets of Bhadravathi.'
     },
     {
@@ -330,6 +343,8 @@ const SEED = {
       targetVolunteers: 20,
       volunteerHoursLogged: 96,
       status: 'Completed',
+      imageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80',
+      localBanner: 'assets/drive-health.svg',
       description: 'Free health check-up camp covering BP, blood sugar, haemoglobin, dental, and vision screening for 520 adults and children from 6 adjoining villages.'
     },
     {
@@ -341,6 +356,8 @@ const SEED = {
       targetVolunteers: 40,
       volunteerHoursLogged: 0,
       status: 'Upcoming',
+      imageUrl: 'https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?auto=format&fit=crop&w=800&q=80',
+      localBanner: 'assets/drive-river.svg',
       description: 'Annual river clean-up: removal of plastic and industrial waste, saplings of native riparian species, and water quality documentation in coordination with Gujarat PCB.'
     },
     {
@@ -352,6 +369,8 @@ const SEED = {
       targetVolunteers: 18,
       volunteerHoursLogged: 52,
       status: 'In Progress',
+      imageUrl: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80',
+      localBanner: 'assets/drive-food.svg',
       description: 'Sorting and packing 700 monthly ration kits (rice, dal, oil, salt) for migrant families and urban poor households registered under the Shakti scheme.'
     },
     {
@@ -363,6 +382,8 @@ const SEED = {
       targetVolunteers: 12,
       volunteerHoursLogged: 0,
       status: 'Upcoming',
+      imageUrl: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
+      localBanner: 'assets/drive-education.svg',
       description: 'Hands-on coding and internet safety sessions for Class 6–8 government school students from SC/ST communities. Collaboration with PM eVIDYA programme.'
     }
   ],
@@ -393,7 +414,22 @@ class SevaSetu {
       const raw = localStorage.getItem(DB_KEY);
       if (raw) {
         const parsed = JSON.parse(raw);
-        if (parsed && parsed.volunteers && parsed.donors) return parsed;
+        if (parsed && parsed.volunteers && parsed.donors) {
+          // Backfill avatar and image URLs if not present in existing storage
+          parsed.volunteers.forEach(v => {
+            if (!v.avatarUrl) {
+              const sv = SEED.volunteers.find(s => s.id === v.id);
+              if (sv) v.avatarUrl = sv.avatarUrl;
+            }
+          });
+          parsed.events.forEach(e => {
+            if (!e.imageUrl) {
+              const se = SEED.events.find(s => s.id === e.id);
+              if (se) { e.imageUrl = se.imageUrl; e.localBanner = se.localBanner; }
+            }
+          });
+          return parsed;
+        }
       }
     } catch (e) { /* fall through to seed */ }
     const copy = JSON.parse(JSON.stringify(SEED));

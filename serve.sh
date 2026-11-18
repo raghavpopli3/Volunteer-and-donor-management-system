@@ -35,6 +35,10 @@ perl -MIO::Socket::INET -e '
     "csv"  => "text/csv",
     "svg"  => "image/svg+xml",
     "png"  => "image/png",
+    "jpg"  => "image/jpeg",
+    "jpeg" => "image/jpeg",
+    "webp" => "image/webp",
+    "gif"  => "image/gif",
     "ico"  => "image/x-icon"
   );
 
